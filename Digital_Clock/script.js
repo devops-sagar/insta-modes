@@ -16,7 +16,7 @@ function updateTime() {
     minuteEL.innerHTML = minutes;
     secondEL.innerHTML = seconds;
 
-    const dateEl = document.querySelector('#date');
+    const dateEl = document.querySelector("#date");
 
     let date = d.getDate();
     if (date >= 0 && date <= 9) date = "0" + date;
