@@ -1,7 +1,11 @@
+window.onload = function () {
+    setInterval(updateTime, 1000)
+};
+
 function updateTime() {
-    const hourEL = Document.querySelector("#hour");
-    const minuteEL = Document.querySelector("#minute");
-    const secondEL = Document.querySelector("#second");
+    const hourEL = document.querySelector("#hour");
+    const minuteEL = document.querySelector("#minute");
+    const secondEL = document.querySelector("#second");
 
     let d = new Date();
     let hours = d.getHours();
@@ -27,7 +31,7 @@ function updateTime() {
     let year = d.getFullYear();
     if (year >= 0 && year <= 9) year = "0" + year;
 
-    dateEl.innerHTML = '${date}/${month}/${year}';
+    dateEl.innerHTML = `${date}/${month}/${year}`;
 
     const dayEL = document.querySelector("#day");
     let daynumber = d.getDay();
@@ -50,7 +54,3 @@ function updateTime() {
     }
     dayEL.innerHTML = day;
 }
-
-window.onload = function () {
-    setInterval(updateTime, 1000)
-};
